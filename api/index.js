@@ -1,5 +1,11 @@
 const express = require('express');
+const { BedrockRuntimeClient, InvokeModelCommand } = require('@aws-sdk/client-bedrock-runtime');
 const app = express();
+
+// Initialize Bedrock client
+const bedrockClient = new BedrockRuntimeClient({
+  region: 'us-east-1', // Change this if your region is different
+});
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -9,7 +15,7 @@ app.use((req, res, next) => {
   const allowedOrigins = [
     'https://thalenabadia.com',
     'http://localhost:5501',
-    'http://127.0.0.1:5501',
+    'http://127.0.0.1:5501'
   ];
   const origin = req.headers.origin;
   
@@ -33,7 +39,7 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-// Chat endpoint (we'll add AWS Bedrock here later)
+// Chat endpoint with AWS Bedrock integration
 app.post('/api/chat', async (req, res) => {
   try {
     const { message } = req.body;
@@ -42,9 +48,35 @@ app.post('/api/chat', async (req, res) => {
       return res.status(400).json({ error: 'Message is required' });
     }
 
-    // TODO: Add AWS Bedrock integration
+    // System prompt with information about you
+    const systemPrompt = `You are an AI assistant that knows about Thalen Abadia. 
+    You should be helpful, friendly, and provide accurate information about Thalen.
+    If you're not sure about something, say so rather than making up information.`;
+
+    // Prepare the prompt for Claude
+    const prompt = `${systemPrompt}\n\nHuman: ${message}\n\nAssistant:`;
+
+    // Prepare the request for Bedrock
+    const params = {
+      modelId: 'anthropic.claude-instant-v1',
+      contentType: 'application/json',
+      accept: 'application/json',
+      body: JSON.stringify({
+        prompt: prompt,
+        max_tokens_to_sample: 1000,
+        temperature: 0.7,
+        top_p: 1,
+        stop_sequences: ['\n\nHuman:']
+      })
+    };
+
+    // Call Bedrock
+    const command = new InvokeModelCommand(params);
+    const response = await bedrockClient.send(command);
+    const responseBody = JSON.parse(new TextDecoder().decode(response.body));
+    
     res.json({ 
-      response: "I'm sorry, I'm not connected to AWS Bedrock yet. This is just a placeholder response."
+      response: responseBody.completion.trim()
     });
   } catch (error) {
     console.error('Error:', error);
