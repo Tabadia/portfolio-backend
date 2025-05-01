@@ -1,0 +1,138 @@
+NAME: Thalen Abadia  
+TITLE: Software Engineer  
+EMAIL: thalenabadia@gmail.com  
+LOCATION: Portland, Oregon  
+PHONE: (503) 438-5716  
+GITHUB: https://github.com/tabadia  
+LINKEDIN: https://linkedin.com/in/thalenabadia  
+PORTFOLIO: http://thalenabadia.com
+
+SUMMARY:  
+Thalen Abadia is a bilingual software engineer (English, Spanish) and a Computer Science and Engineering student at Santa Clara University (GPA 3.9, expected 2028). He has a minor in Responsible Artificial Intelligence and specializes in full-stack web development, cloud infrastructure, procedural content generation, and large language model (LLM) integration. He has a deep interest in applying technology to social impact problems, such as emergency housing and urban safety, and enjoys blending philosophical reasoning with engineering.
+
+EDUCATION:  
+- Institution: Santa Clara University  
+- Degree: B.S. in Computer Science and Engineering  
+- Minor: Responsible Artificial Intelligence  
+- GPA: 3.9  
+- Expected Graduation: June 2028  
+- Relevant Courses: Advanced Programming, Data Structures, Discrete Mathematics, Embedded Systems
+
+EXPERIENCE:
+
+1. Assistant Researcher – Santa Clara University Department of Philosophy  
+   Dates: April 2025 – Present  
+   Description:  
+   - Designed and developed virtual reality philosophy modules using Unity and C#  
+   - Simulated ethical thought experiments for educational use  
+   - Researched how immersive environments affect moral reasoning  
+
+2. AI & Game Development Intern – Mana Burn  
+   Dates: March 2025 – Present  
+   Description:  
+   - Implemented procedural level generation in Python with ComfyUI  
+   - Integrated large language models into Unity-based games for dynamic quest and story adaptation  
+   - Built interactive combat mechanics in C#  
+
+3. Website Developer – Olerai Leadership  
+   Dates: November 2022 – July 2023  
+   Description:  
+   - Led full redesign of WordPress site using Elementor and Figma  
+   - Standardized site layout and resolved legacy design issues  
+   - Managed and optimized email campaign database reaching 500+ clients  
+
+4. Freelance Full Stack Developer – EmojiSwap  
+   Dates: December 2022 – February 2023  
+   Description:  
+   - Built a Node.js Discord bot to scrape and log over 300,000 live trading messages  
+   - Created AWS S3-based database for scalable storage  
+   - Designed a web-based visualization dashboard with real-time statistics  
+
+PROJECTS:
+
+1. RecycleAid  
+   GitHub: https://github.com/RecycleAid/RecycleAid  
+   Description:  
+   - AI image classifier for recyclable materials using PyTorch  
+   - Over 95% classification accuracy on garbage dataset  
+   - Web interface provides recycling instructions based on image uploads  
+
+2. SafeMap SJ  
+   GitHub: https://github.com/berkvakar/safemapsj  
+   Description:  
+   - LLM-powered neighborhood safety mapping tool for San Jose  
+   - Built with AWS Bedrock and S3 for dataset storage and inference  
+   - Python Flask backend with frontend designed for scalability and multi-city support  
+
+3. Sheltr  
+   GitHub: https://github.com/Tabadia/shelter-finder  
+   Description:  
+   - Real-time emergency shelter locator  
+   - Backend built with FastAPI and integrated with AWS services including EC2, DynamoDB, and Bedrock  
+   - Organizations can post shelter availability and manage crowd control  
+
+SKILLS:
+
+Languages:  
+- JavaScript (Advanced, 3+ years)  
+- Python (Advanced, 4+ years)  
+- HTML/CSS (Advanced, 4+ years)  
+- C (Intermediate, 1 year)  
+- C# (Intermediate, 2 years)  
+- Java (Intermediate, 2 years)  
+
+Frontend:  
+- React.js (Advanced)  
+- Angular (Intermediate)  
+- TailwindCSS (Experienced)  
+- HTML/CSS (Advanced)  
+- Figma (Experienced)  
+
+Backend:  
+- Node.js (Advanced)  
+- Express.js (Advanced)  
+- Flask (Intermediate)  
+- FastAPI (Intermediate)  
+- REST API design (Advanced)  
+
+Cloud and DevOps:  
+- AWS (Bedrock, S3, EC2, DynamoDB)  
+- Firebase  
+- Docker  
+- Git (Advanced)  
+- CI/CD (Advanced)  
+
+Other Tools:  
+- Unity (Intermediate)  
+- WordPress (Experienced)  
+- Postman  
+- Jira  
+
+ACHIEVEMENTS:  
+- Best Freshman Hack – Hack for Humanity  
+- Second Place AI – AWS x INRIX Hackathon  
+- Second Place Overall – Adobe Hackathon  
+
+INTERESTS:
+
+Professional:  
+- Scalable full-stack web development  
+- AI/ML integration (especially LLMs)  
+- Responsible and ethical AI  
+- Procedural generation  
+- Clean code and maintainable systems  
+- Virtual and augmented reality  
+
+Personal:  
+- Game design and development  
+- Philosophical inquiry and simulation  
+- Creative writing  
+- Bilingual communication (English and Spanish)
+
+LLM-RELEVANT FACTS:
+- Uses AWS Bedrock LLMs in multiple projects  
+- Focused on applied AI in social contexts: safety, shelters, sustainability  
+- Combines Unity VR with philosophy for research applications  
+- Regular hackathon participant with strong rapid prototyping skills  
+- Interested in philosophical simulations of ethics via interactive tech  
+

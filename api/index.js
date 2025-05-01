@@ -1,7 +1,14 @@
 const express = require('express');
 const { BedrockRuntimeClient, InvokeModelCommand } = require('@aws-sdk/client-bedrock-runtime');
 const rateLimit = require('express-rate-limit');
+const path = require('path');
+const fs = require('fs');
+
 const app = express();
+
+// Load profile data from txt file
+const profilePath = path.join(__dirname, '..', 'data', 'profile.txt');
+const profileContent = fs.readFileSync(profilePath, 'utf8');
 
 // Initialize Bedrock client
 const bedrockClient = new BedrockRuntimeClient({
@@ -63,10 +70,8 @@ app.post('/api/chat', chatLimiter, async (req, res) => {
       return res.status(400).json({ error: 'Message is too long. Maximum length is 500 characters.' });
     }
 
-    // System prompt with information about you
-    const systemPrompt = `You are an AI assistant that knows about Thalen Abadia. 
-    You should be helpful, friendly, and provide accurate information about Thalen.
-    If you're not sure about something, say so rather than making up information.`;
+    // Use the profile content directly as the system prompt
+    const systemPrompt = profileContent;
 
     // Prepare the prompt for Claude
     const prompt = `${systemPrompt}\n\nHuman: ${message}\n\nAssistant:`;
