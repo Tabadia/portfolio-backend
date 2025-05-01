@@ -83,7 +83,7 @@ app.post('/api/chat', chatLimiter, async (req, res) => {
       accept: 'application/json',
       body: JSON.stringify({
         prompt: prompt,
-        max_tokens_to_sample: 1000,
+        max_tokens_to_sample: 200,
         temperature: 0.7,
         top_p: 1,
         stop_sequences: ['\n\nHuman:']
