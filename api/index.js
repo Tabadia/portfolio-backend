@@ -6,7 +6,11 @@ app.use(express.json());
 
 // CORS middleware
 app.use((req, res, next) => {
-  const allowedOrigins = ['https://thalenabadia.com', 'http://localhost:5501'];
+  const allowedOrigins = [
+    'https://thalenabadia.com',
+    'http://localhost:5501',
+    'http://127.0.0.1:5501',
+  ];
   const origin = req.headers.origin;
   
   if (allowedOrigins.includes(origin)) {
@@ -14,7 +18,13 @@ app.use((req, res, next) => {
   }
   
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  
+  // Handle preflight requests
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+  
   next();
 });
 
