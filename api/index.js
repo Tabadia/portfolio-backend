@@ -74,7 +74,7 @@ app.post('/api/chat', chatLimiter, async (req, res) => {
     const systemPrompt = profileContent;
 
     // Prepare the prompt for Claude
-    const prompt = `${systemPrompt}\n\nHuman: ${message}\n\nAssistant:`;
+    const prompt = `${systemPrompt}\n\nIMPORTANT INSTRUCTION: Respond like you're texting - use very short, casual responses (1-4 lines max). No bullet points or long explanations. Be friendly but super brief.\n\nHuman: ${message}\n\nAssistant:`;
 
     // Prepare the request for Bedrock
     const params = {
@@ -83,7 +83,7 @@ app.post('/api/chat', chatLimiter, async (req, res) => {
       accept: 'application/json',
       body: JSON.stringify({
         prompt: prompt,
-        max_tokens_to_sample: 200,
+        max_tokens_to_sample: 100,
         temperature: 0.7,
         top_p: 1,
         stop_sequences: ['\n\nHuman:']
