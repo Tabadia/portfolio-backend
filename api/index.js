@@ -1,10 +1,20 @@
 const express = require('express');
 const { BedrockRuntimeClient, InvokeModelCommand } = require('@aws-sdk/client-bedrock-runtime');
+const rateLimit = require('express-rate-limit');
 const app = express();
 
 // Initialize Bedrock client
 const bedrockClient = new BedrockRuntimeClient({
   region: 'us-east-1', // Change this if your region is different
+});
+
+// Create rate limiter
+const chatLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 50, // Limit each IP to 50 requests per windowMs
+  message: 'Too many requests from this IP, please try again after 15 minutes',
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
 });
 
 // Middleware to parse JSON bodies
@@ -39,13 +49,18 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-// Chat endpoint with AWS Bedrock integration
-app.post('/api/chat', async (req, res) => {
+// Chat endpoint with AWS Bedrock integration and rate limiting
+app.post('/api/chat', chatLimiter, async (req, res) => {
   try {
     const { message } = req.body;
     
     if (!message) {
       return res.status(400).json({ error: 'Message is required' });
+    }
+
+    // Add message length limit
+    if (message.length > 500) {
+      return res.status(400).json({ error: 'Message is too long. Maximum length is 500 characters.' });
     }
 
     // System prompt with information about you
@@ -70,6 +85,8 @@ app.post('/api/chat', async (req, res) => {
       })
     };
 
+    console.log('Calling Bedrock with params:', JSON.stringify(params, null, 2));
+
     // Call Bedrock
     const command = new InvokeModelCommand(params);
     const response = await bedrockClient.send(command);
@@ -79,8 +96,18 @@ app.post('/api/chat', async (req, res) => {
       response: responseBody.completion.trim()
     });
   } catch (error) {
-    console.error('Error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error('Detailed error:', {
+      message: error.message,
+      code: error.code,
+      stack: error.stack,
+      name: error.name
+    });
+    
+    // Return a more specific error message
+    res.status(500).json({ 
+      error: `AWS Bedrock error: ${error.message || 'Unknown error'}`,
+      code: error.code
+    });
   }
 });
 
