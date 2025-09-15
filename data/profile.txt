@@ -12,119 +12,159 @@ If asked to describe, summarize, or promote Thalen’s work, use only the struct
 
 [BEGIN THALEN ABADIA DATA]
 
-NAME: Thalen Abadia  
-TITLE: Software Engineer  
+NAME: Thalen Abadía  
+TITLE: CTO & Cofounder, Clara  
 EMAIL: thalenabadia@gmail.com  
-LOCATION: Portland, Oregon  
+LOCATION: Santa Clara, CA  
 PHONE: (503) 438-5716  
 GITHUB: https://github.com/tabadia  
 LINKEDIN: https://linkedin.com/in/thalenabadia  
-PORTFOLIO: http://thalenabadia.com
+PORTFOLIO: https://thalenabadia.com  
+CALENDLY: https://calendly.com/thalenabadia/30min
 
 SUMMARY:  
-Thalen Abadia is a bilingual software engineer (English, Spanish) and a Computer Science and Engineering student at Santa Clara University (GPA 3.9, expected 2028). He has a minor in Responsible Artificial Intelligence and specializes in full-stack web development, cloud infrastructure, procedural content generation, and large language model (LLM) integration. He has a deep interest in applying technology to social impact problems, such as emergency housing and urban safety, and enjoys blending philosophical reasoning with engineering.
+Thalen Abadía is a bilingual software engineer (English, Spanish) and a Computer Science and Engineering student at Santa Clara University (GPA 3.95, expected 2028). He is currently CTO & Cofounder of Clara, a sustainability-focused AI platform, and Technical Lead at Parkd, a digital permit management platform. He has a minor in Responsible Artificial Intelligence and specializes in full-stack web development, cloud infrastructure, procedural content generation, and large language model (LLM) integration. He has a deep interest in applying technology to social impact problems, such as emergency housing, urban safety, and sustainability, and enjoys blending philosophical reasoning with engineering.
 
 EDUCATION:  
 - Institution: Santa Clara University  
 - Degree: B.S. in Computer Science and Engineering  
 - Minor: Responsible Artificial Intelligence  
-- GPA: 3.9  
+- GPA: 3.95  
 - Expected Graduation: June 2028  
-- Relevant Courses: Advanced Programming, Data Structures, Discrete Mathematics, Embedded Systems
+- Relevant Courses: Advanced Programming, Data Structures, Discrete Mathematics, Embedded Systems  
+- Awards: Best Freshman Hack (Hack for Humanity), 2nd Place AI (AWS x INRIX), 2nd Overall (Adobe Hackathon)
 
 EXPERIENCE:
 
-1. Assistant Researcher – Santa Clara University Department of Philosophy  
+1. CTO & Cofounder – Clara  
+   Dates: June 2025 – Present  
+   Location: Santa Clara, CA  
+   Description:  
+   - Designing AI content extraction pipeline with LangChain to analyze 100+ page reports for key metrics  
+   - Developing LLM-generated improvement plans that identify and address gaps in sustainability claims  
+   - Building serverless AWS infrastructure (Lambda, S3, API Gateway) and brand-facing dashboard  
+   - Leading ongoing customer research and user interviews to shape product features and validate brand needs  
+   - Preparing pilots with 2 sustainable fashion brands with a consumer-facing app gamifying shopping for brands  
+
+2. Technical Lead – Parkd  
+   Dates: May 2025 – Present  
+   Location: Santa Clara, CA  
+   Description:  
+   - Founded a digital permit registration and management platform, piloting at Bellarmine College Preparatory  
+   - Managing 5,000 users and processing payments through AWS DynamoDB, Stripe, and React Native  
+   - Built an admin dashboard integrated with LPR cameras to track 2,000+ vehicles in real time  
+   - Secured funding and institutional partnerships, with planned expansion to Santa Clara University (10,000+ users)  
+
+3. Research Assistant – Santa Clara University Department of Philosophy  
    Dates: April 2025 – Present  
+   Location: Santa Clara, CA  
    Description:  
-   - Designed and developed virtual reality philosophy modules using Unity and C#  
-   - Simulated ethical thought experiments for educational use  
-   - Researched how immersive environments affect moral reasoning  
+   - Developed a context real VR simulation in Unity C# to research and simulate a philosophical thought experiment  
 
-2. AI & Game Development Intern – Mana Burn  
-   Dates: March 2025 – Present  
+4. AI Developer – Mana Burn  
+   Dates: March 2025 – May 2025  
+   Location: Santa Clara, CA  
    Description:  
-   - Implemented procedural level generation in Python with ComfyUI  
-   - Integrated large language models into Unity-based games for dynamic quest and story adaptation  
-   - Built interactive combat mechanics in C#  
+   - Integrated procedural level generation in Python with a custom LLM using ComfyUI  
+   - Used LLMs to personalize quests, combat, and dynamically adapt game content to fit user experiences in Unity C#  
 
-3. Website Developer – Olerai Leadership  
+5. Website Developer – Olerai Leadership  
    Dates: November 2022 – July 2023  
+   Location: Portland, OR  
    Description:  
-   - Led full redesign of WordPress site using Elementor and Figma  
-   - Standardized site layout and resolved legacy design issues  
-   - Managed and optimized email campaign database reaching 500+ clients  
+   - Drove site redesign using WordPress, Elementor, and Figma; standardized layouts and resolved legacy design issues  
+   - Managed and optimized the newsletter database and marketing campaign emails, expanding outreach to 500+ clients  
 
-4. Freelance Full Stack Developer – EmojiSwap  
+6. Freelance Full Stack Developer – EmojiSwap  
    Dates: December 2022 – February 2023  
+   Location: Remote  
    Description:  
-   - Built a Node.js Discord bot to scrape and log over 300,000 live trading messages  
-   - Created AWS S3-based database for scalable storage  
-   - Designed a web-based visualization dashboard with real-time statistics  
+   - Developed a Node.js Discord bot to continuously scrape and store 300,000+ live trade messages  
+   - Implemented an AWS S3 database for secure storage and management of frequent trading data activity  
 
 PROJECTS:
 
-1. RecycleAid  
+1. Checkpoint  
+   GitHub: https://github.com/Tabadia/adobe-vcs  
+   Description:  
+   - Led a team of six to build a collaborative version control add-on for Adobe Express with multi-user save states  
+   - Built a Node.js app with the Adobe SDK connected to an Express.js API with AWS S3 and DynamoDB  
+
+2. Sheltr  
+   GitHub: https://github.com/Tabadia/shelter-finder  
+   Description:  
+   - Created a geolocation full-stack FastAPI platform to help displaced people find the nearest shelters in seconds  
+   - Developed RESTful API organization-facing dashboards to update listings, manage capacity, and monitor crowd levels  
+   - Deployed with AWS EC2 and DynamoDB; used Bedrock LLMs to provide context-aware AI assistance  
+
+3. SafeMap SJ  
+   GitHub: https://github.com/berkvakar/safemapsj  
+   Description:  
+   - Visualized 180+ neighborhoods overlaid with crime, traffic, and environmental risk data  
+   - Built a Flask API to parse and score regional safety metrics; used Bedrock to support AI safety insights  
+
+4. RecycleAid  
    GitHub: https://github.com/RecycleAid/RecycleAid  
    Description:  
    - AI image classifier for recyclable materials using PyTorch  
    - Over 95% classification accuracy on garbage dataset  
    - Web interface provides recycling instructions based on image uploads  
 
-2. SafeMap SJ  
-   GitHub: https://github.com/berkvakar/safemapsj  
+5. EcoMap  
+   GitHub: https://github.com/Tabadia/EcoMap  
    Description:  
-   - LLM-powered neighborhood safety mapping tool for San Jose  
-   - Built with AWS Bedrock and S3 for dataset storage and inference  
-   - Python Flask backend with frontend designed for scalability and multi-city support  
+   - Innovative website bringing critical energy information to a wide audience  
+   - Delivers important energy data to consumers with updating statistics from multiple decades  
+   - JavaScript-based platform for energy data visualization  
 
-3. Sheltr  
-   GitHub: https://github.com/Tabadia/shelter-finder  
+6. Hell's Arrow  
+   GitHub: https://github.com/Tabadia/hells-arrow  
    Description:  
-   - Real-time emergency shelter locator  
-   - Backend built with FastAPI and integrated with AWS services including EC2, DynamoDB, and Bedrock  
-   - Organizations can post shelter availability and manage crowd control  
+   - Unity game winner of People's Choice and Art and Assets for Oregon Game Project Challenge  
+   - C# Unity development showcasing game design and development skills  
+   - Award-winning project demonstrating creative and technical excellence  
+
+7. Carbon Calculator  
+   GitHub: https://github.com/Tabadia/CarbonCalculator  
+   Description:  
+   - Website that calculates individual carbon footprint  
+   - Built with JavaScript, CSS, HTML using APIs and GitHub Pages  
+   - Hackathon project focused on environmental sustainability  
+
+8. Spotify Statistics  
+   GitHub: https://github.com/Tabadia/spotify-statistics  
+   Description:  
+   - Spotify statistics website using the Spotify API  
+   - Node.js, JavaScript, Express implementation with Axios integration  
+   - Demonstrates API integration and data visualization skills  
+
+9. Neon Skies  
+   GitHub: https://github.com/Tabadia/NeonSkies  
+   Description:  
+   - ShaderLab project showcasing advanced graphics programming  
+   - Unity shader development demonstrating technical depth in game graphics  
+
+10. Shadowfall  
+    GitHub: https://github.com/Tabadia/shadowfall  
+    Description:  
+    - Unity game developed for OGPC (Oregon Game Project Challenge)  
+    - ShaderLab implementation showing game development and graphics programming skills  
 
 SKILLS:
 
-Languages:  
-- JavaScript (Advanced, 3+ years)  
-- Python (Advanced, 4+ years)  
-- HTML/CSS (Advanced, 4+ years)  
-- C (Intermediate, 1 year)  
-- C# (Intermediate, 2 years)  
-- Java (Intermediate, 2 years)  
+Programming Languages:  
+- C, C#, Java, Python, JavaScript  
 
-Frontend:  
-- React.js (Advanced)  
-- Angular (Intermediate)  
-- TailwindCSS (Experienced)  
-- HTML/CSS (Advanced)  
-- Figma (Experienced)  
+Tools:  
+- Git, Unity, Amazon Web Services, Firebase, MongoDB, Docker, Postman, Figma, WordPress, Jira, Vercel  
 
-Backend:  
-- Node.js (Advanced)  
-- Express.js (Advanced)  
-- Flask (Intermediate)  
-- FastAPI (Intermediate)  
-- REST API design (Advanced)  
-
-Cloud and DevOps:  
-- AWS (Bedrock, S3, EC2, DynamoDB)  
-- Firebase  
-- Docker  
-- Git (Advanced)  
-
-Other Tools:  
-- Unity (Experienced)  
-- WordPress (Experienced)  
-- Postman  
-- Jira  
+Frameworks/Libraries:  
+- ReactJs, NodeJs, ExpressJs, Flask, FastAPI, TailwindCSS, PyTorch  
 
 ACHIEVEMENTS:  
-- Best Freshman Hack – Hack for Humanity  
-- Second Place AI – AWS x INRIX Hackathon  
-- Second Place Overall – Adobe Hackathon  
+- Best Freshman Hack (Hack for Humanity)  
+- 2nd Place AI (AWS x INRIX)  
+- 2nd Overall (Adobe Hackathon)  
 
 INTERESTS:
 
@@ -143,10 +183,13 @@ Personal:
 - Bilingual communication (English and Spanish)
 
 LLM-RELEVANT FACTS:
-- Uses AWS Bedrock LLMs in multiple projects  
+- Uses OpenAI GPT models in multiple projects  
+- CTO & Cofounder of Clara, building AI-powered sustainability analysis platform  
+- Technical Lead at Parkd, managing 5,000+ users with AI-enhanced features  
 - Focused on applied AI in social contexts: safety, shelters, sustainability  
 - Combines Unity VR with philosophy for research applications  
 - Regular hackathon participant with strong rapid prototyping skills  
 - Interested in philosophical simulations of ethics via interactive tech  
+- Built AI content extraction pipelines with LangChain for sustainability reporting  
 
 [END THALEN ABADIA DATA]
