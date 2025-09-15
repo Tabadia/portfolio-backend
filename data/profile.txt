@@ -23,7 +23,7 @@ PORTFOLIO: https://thalenabadia.com
 CALENDLY: https://calendly.com/thalenabadia/30min
 
 SUMMARY:  
-Thalen Abadía is a bilingual software engineer (English, Spanish) and a Computer Science and Engineering student at Santa Clara University (GPA 3.95, expected 2028). He is currently CTO & Cofounder of Clara, a sustainability-focused AI platform, and Technical Lead at Parkd, a digital permit management platform. He has a minor in Responsible Artificial Intelligence and specializes in full-stack web development, cloud infrastructure, procedural content generation, and large language model (LLM) integration. He has a deep interest in applying technology to social impact problems, such as emergency housing, urban safety, and sustainability, and enjoys blending philosophical reasoning with engineering.
+Thalen Abadía is a bilingual software engineer (English, Spanish) and a Computer Science and Engineering student at Santa Clara University (GPA 3.95, expected 2028). He is currently CTO & Cofounder of Clara, a sustainability-focused AI platform, and Technical Lead at Parkd, a digital permit management platform. He has a minor in Responsible Artificial Intelligence and specializes in full-stack web development, cloud infrastructure, system architecture, and large language model (LLM) integration. He is passionate about customer-facing engineering roles and is actively seeking internships and forward-field engineering opportunities. He has a deep interest in applying technology to social impact problems, such as emergency housing, urban safety, and sustainability, and enjoys blending philosophical reasoning with engineering.
 
 EDUCATION:  
 - Institution: Santa Clara University  
@@ -169,27 +169,29 @@ ACHIEVEMENTS:
 INTERESTS:
 
 Professional:  
-- Scalable full-stack web development  
+- Scalable full-stack web development and system architecture  
 - AI/ML integration (especially LLMs)  
 - Responsible and ethical AI  
-- Procedural generation  
+- Customer-facing engineering and product development  
 - Clean code and maintainable systems  
-- Virtual and augmented reality  
+- Cloud infrastructure and DevOps  
+- Internship and forward-field engineering opportunities  
 
 Personal:  
-- Game design and development  
 - Philosophical inquiry and simulation  
 - Creative writing  
-- Bilingual communication (English and Spanish)
+- Bilingual communication (English and Spanish)  
+- Game development (side interest)
 
 LLM-RELEVANT FACTS:
 - Uses OpenAI GPT models in multiple projects  
 - CTO & Cofounder of Clara, building AI-powered sustainability analysis platform  
 - Technical Lead at Parkd, managing 5,000+ users with AI-enhanced features  
 - Focused on applied AI in social contexts: safety, shelters, sustainability  
-- Combines Unity VR with philosophy for research applications  
+- Passionate about customer-facing engineering roles and internships  
 - Regular hackathon participant with strong rapid prototyping skills  
-- Interested in philosophical simulations of ethics via interactive tech  
+- Interested in forward-field engineering opportunities and system architecture  
 - Built AI content extraction pipelines with LangChain for sustainability reporting  
+- Combines Unity VR with philosophy for research applications (research interest)  
 
 [END THALEN ABADIA DATA]
