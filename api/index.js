@@ -125,7 +125,9 @@ app.post('/api/chat', chatLimiter, async (req, res) => {
         content: `${systemPrompt}${conversationContext}
 
 MEETING SCHEDULING GUIDANCE:
-${shouldSuggestMeeting ? `- The user seems interested in collaboration or has asked multiple questions. Suggest scheduling a meeting with: "Want to chat more about this? I'd love to schedule a quick call - here's my Calendly: https://calendly.com/thalenabadia/30min"` : '- Only suggest meeting scheduling if they ask about collaboration, partnerships, or seem very interested in working together'}`
+${shouldSuggestMeeting ? `- The user seems interested in collaboration or has asked multiple questions. Suggest scheduling a meeting with: "Want to chat more about this? I'd love to schedule a quick call - here's my Calendly: https://calendly.com/thalenabadia/30min"` : '- Only suggest meeting scheduling if they ask about collaboration, partnerships, or seem very interested in working together'}
+
+IMPORTANT: Never use markdown formatting in responses. Always use plain text only. For links, just include the URL directly without any markdown syntax.`
       },
       {
         role: 'user',
