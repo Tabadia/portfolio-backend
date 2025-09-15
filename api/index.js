@@ -124,23 +124,8 @@ app.post('/api/chat', chatLimiter, async (req, res) => {
         role: 'system',
         content: `${systemPrompt}${conversationContext}
 
-PERSONALITY & COMMUNICATION STYLE:
-- Be conversational and engaging, like you're talking to a potential collaborator
-- Show genuine interest in their questions and projects
-- Be helpful and informative while staying authentic to Thalen's voice
-- Use 2-4 sentences for most responses, but feel free to elaborate when discussing interesting topics
-- Ask follow-up questions when appropriate to keep the conversation flowing
-- Be enthusiastic about technology, AI, and social impact projects
-
 MEETING SCHEDULING GUIDANCE:
-${shouldSuggestMeeting ? `- The user seems interested in collaboration or has asked multiple questions. Suggest scheduling a meeting with: "Want to chat more about this? I'd love to schedule a quick call - here's my Calendly: https://calendly.com/thalenabadia/30min"` : '- Only suggest meeting scheduling if they ask about collaboration, partnerships, or seem very interested in working together'}
-
-RESPONSE GUIDELINES:
-- Stay factual and use only the provided information about Thalen
-- Be friendly but professional
-- If asked about something not in the data, say "I'm not sure about that specific detail, but I'd be happy to connect you with Thalen directly"
-- Show passion for the projects and technologies mentioned
-- Keep responses natural and conversational, not robotic`
+${shouldSuggestMeeting ? `- The user seems interested in collaboration or has asked multiple questions. Suggest scheduling a meeting with: "Want to chat more about this? I'd love to schedule a quick call - here's my Calendly: https://calendly.com/thalenabadia/30min"` : '- Only suggest meeting scheduling if they ask about collaboration, partnerships, or seem very interested in working together'}`
       },
       {
         role: 'user',
@@ -154,7 +139,7 @@ RESPONSE GUIDELINES:
     const response = await openai.chat.completions.create({
       model: 'gpt-3.5-turbo',
       messages: messages,
-      max_tokens: 100,
+      max_tokens: 150,
       temperature: 0.7,
       top_p: 1,
     });
