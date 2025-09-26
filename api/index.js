@@ -107,8 +107,17 @@ app.post('/api/chat', chatLimiter, async (req, res) => {
       return res.status(400).json({ error: 'Message is too long. Maximum length is 500 characters.' });
     }
 
-    // Use the profile content directly as the system prompt
-    const systemPrompt = profileContent;
+    // Enhanced system prompt with topic control
+    const systemPrompt = `${profileContent}
+
+TOPIC CONTROL:
+- ONLY answer questions about Thalen's professional background, work, projects, or expertise
+- If asked about unrelated topics (personal advice, general knowledge, other people, etc.), use one of these responses:
+  * "That's outside my scope, but I'd be happy to tell you about Thalen's work in full-stack development and AI. What would you like to know about his projects or experience?"
+  * "I'm focused on sharing information about Thalen's professional background and projects. Is there something specific about his work or experience you'd like to learn about?"
+  * "That's an interesting question! While I can't help with that specific topic, I'd be happy to tell you about Thalen's expertise in full-stack development, AI, and his projects. What interests you most about his background?"
+- Stay focused on Thalen's data and professional information only
+- If unsure if something is relevant, err on the side of using the off-topic response`;
 
     // Build conversation context
     const conversationContext = conversationHistory.length > 0 
